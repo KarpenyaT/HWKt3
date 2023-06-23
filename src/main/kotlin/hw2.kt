@@ -1,8 +1,8 @@
 fun main() {
     val typePaySystem = "Мир"
-    var sumTransfers = 580_358
+    val sumTransfers = 580_358
     val transfer = 3000
-    val comm = sumComm(typePaySystem,sumTransfers,transfer=transfer * 100)
+    val comm = sumComm(typePaySystem, sumTransfers, transfer = transfer * 100)
     if (comm == -1) {
         println("Отмена перевода. Превышен лимит")
     } else {
@@ -17,8 +17,10 @@ fun sumComm(typePaySystem: String = "VK Pay", sumTransfers: Int = 0, transfer: I
     return when (typePaySystem) {
         "Mastercard", "Maestro" -> calcSumCommMscMaes(sumTransfers, transfer)
         "Visa", "Мир" -> calcSumCommVisMir(sumTransfers, transfer)
-        "VK Pay" -> calcSumCommVKPay(sumTransfers,transfer)
-        else -> {0}
+        "VK Pay" -> calcSumCommVKPay(sumTransfers, transfer)
+        else -> {
+            0
+        }
     }
 }
 
