@@ -1,13 +1,15 @@
+package ru.netology
+
 fun main() {
     val typePaySystem = "Мир"
-    val sumTransfers = 580_358
-    val transfer = 3000
-    val comm = sumComm(typePaySystem, sumTransfers, transfer = transfer * 100)
+    val sumTransfers = 580_358_00
+    val transfer = 3000_00
+    val comm = sumComm(typePaySystem, sumTransfers, transfer = transfer)
     if (comm == -1) {
-        println("Отмена перевода. Превышен лимит")
+        println("Отмена перевода. Превышен лимит или платежная система не доступна")
     } else {
-        println("Комиссия за перевод составляет " +
-                "${(comm/100).toInt()} руб"
+        println(
+            "Комиссия за перевод составляет ${(comm / 100)} руб"
         )
     }
 }
@@ -19,7 +21,7 @@ fun sumComm(typePaySystem: String = "VK Pay", sumTransfers: Int = 0, transfer: I
         "Visa", "Мир" -> calcSumCommVisMir(sumTransfers, transfer)
         "VK Pay" -> calcSumCommVKPay(sumTransfers, transfer)
         else -> {
-            0
+            -1
         }
     }
 }
