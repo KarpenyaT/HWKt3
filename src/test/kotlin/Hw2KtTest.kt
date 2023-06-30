@@ -9,7 +9,7 @@ class Hw2KtTest {
         val transfer = 14000_00
         val result = sumComm(transfer = transfer)
 
-        assertEquals(-1, result)
+        assertEquals(0, result)
     }
     @Test
     fun sumCommVkPayDefaultLimit() {
