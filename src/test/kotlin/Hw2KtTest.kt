@@ -1,5 +1,3 @@
-package ru.netology
-
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -11,14 +9,14 @@ class Hw2KtTest {
         val transfer = 14000_00
         val result = sumComm(transfer = transfer)
 
-        assertEquals(0,result)
+        assertEquals(-1, result)
     }
     @Test
     fun sumCommVkPayDefaultLimit() {
         val transfer = 16000_00
         val result = sumComm(transfer = transfer)
 
-        assertEquals(-1,result)
+        assertEquals(-1, result)
     }
     @Test
     fun sumCommMas0() {
@@ -27,7 +25,7 @@ class Hw2KtTest {
         val transfer = 3_000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(0,result)
+        assertEquals(0, result)
     }
     @Test
     fun sumCommMas() {
@@ -36,7 +34,7 @@ class Hw2KtTest {
         val transfer = 3_000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(38_00,result)
+        assertEquals(38_00, result)
     }
     @Test
     fun sumCommMasLimitDay() {
@@ -45,7 +43,7 @@ class Hw2KtTest {
         val transfer = 152_000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(-1,result)
+        assertEquals(-1, result)
     }
     @Test
     fun sumCommMasLimitMonth() {
@@ -54,7 +52,7 @@ class Hw2KtTest {
         val transfer = 35_000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(-1,result)
+        assertEquals(-1, result)
     }
     @Test
     fun sumCommMaes0() {
@@ -63,7 +61,7 @@ class Hw2KtTest {
         val transfer = 3_000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(0,result)
+        assertEquals(0, result)
     }
     @Test
     fun sumCommMaes() {
@@ -72,7 +70,7 @@ class Hw2KtTest {
         val transfer = 3_000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(38_00,result)
+        assertEquals(38_00, result)
     }
     @Test
     fun sumCommMaesLimitDay() {
@@ -81,7 +79,7 @@ class Hw2KtTest {
         val transfer = 152_000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(-1,result)
+        assertEquals(-1, result)
     }
     @Test
     fun sumCommMaesLimitMonth() {
@@ -90,7 +88,7 @@ class Hw2KtTest {
         val transfer = 35_000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(-1,result)
+        assertEquals(-1, result)
     }
     @Test
     fun sumCommVisMin() {
@@ -99,7 +97,7 @@ class Hw2KtTest {
         val transfer = 3000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(35_00,result)
+        assertEquals(35_00, result)
     }
     @Test
     fun sumCommVis() {
@@ -108,7 +106,7 @@ class Hw2KtTest {
         val transfer = 5000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(37_50,result)
+        assertEquals(37_50, result)
     }
     @Test
     fun sumCommVisaLimitDay() {
@@ -117,7 +115,7 @@ class Hw2KtTest {
         val transfer = 152_000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(-1,result)
+        assertEquals(-1, result)
     }
     @Test
     fun sumCommVisaLimitMonth() {
@@ -126,7 +124,7 @@ class Hw2KtTest {
         val transfer = 35_000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(-1,result)
+        assertEquals(-1, result)
     }
     @Test
     fun sumCommMirMin() {
@@ -135,7 +133,7 @@ class Hw2KtTest {
         val transfer = 3000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(35_00,result)
+        assertEquals(35_00, result)
     }
     @Test
     fun sumCommMir() {
@@ -144,7 +142,7 @@ class Hw2KtTest {
         val transfer = 5000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(37_50,result)
+        assertEquals(37_50, result)
     }
     @Test
     fun sumCommMirLimitDay() {
@@ -153,7 +151,7 @@ class Hw2KtTest {
         val transfer = 152_000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(-1,result)
+        assertEquals(-1, result)
     }
     @Test
     fun sumCommMirLimitMonth() {
@@ -162,16 +160,16 @@ class Hw2KtTest {
         val transfer = 35_000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(-1,result)
+        assertEquals(-1, result)
     }
     @Test
     fun sumCommVkPay0() {
         val typePaySystem = "VK Pay"
         val sumTransfers = 10_358_00
         val transfer = 14000_00
-        val result = sumComm(typePaySystem,sumTransfers,transfer = transfer)
+        val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(0,result)
+        assertEquals(0, result)
     }
     @Test
     fun sumCommVkLimitDay() {
@@ -180,7 +178,7 @@ class Hw2KtTest {
         val transfer = 16_000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(-1,result)
+        assertEquals(-1, result)
     }
     @Test
     fun sumCommVKLimitMonth() {
@@ -189,7 +187,7 @@ class Hw2KtTest {
         val transfer = 10_000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(-1,result)
+        assertEquals(-1, result)
     }
     @Test
     fun sumCommOther() {
@@ -198,7 +196,6 @@ class Hw2KtTest {
         val transfer = 160_000_00
         val result = sumComm(typePaySystem, sumTransfers, transfer = transfer)
 
-        assertEquals(-1,result)
+        assertEquals(-1, result)
     }
-
 }

@@ -1,5 +1,3 @@
-package ru.netology
-
 fun main() {
     println("был(а) ${agoToText(3600)}")
 }

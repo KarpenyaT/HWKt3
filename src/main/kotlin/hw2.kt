@@ -1,4 +1,4 @@
-package ru.netology
+
 
 fun main() {
     val typePaySystem = "Mir"
